@@ -1,3 +1,3 @@
 # computer-infrastructure
 
-This repository contains my wokr for the Autumn 2024 COMPUTER INFRASTRUCTURE module at Atlantic Technological University.
+This repository contains my work for the Autumn 2024 COMPUTER INFRASTRUCTURE module at Atlantic Technological University.
