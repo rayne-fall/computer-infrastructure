@@ -1,0 +1,18 @@
+name: Check Weather
+
+on: 
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 * * *'
+jobs:
+  extract_weather_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository
+        uses: rayne_fall/clone-github-repo-action@v2.3
+        with: 
+          depth: 1
+          branch: 'main'
+          owner: 'rayne_fall'
+          repository: 'computer-infrastructure'
+
