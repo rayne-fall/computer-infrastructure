@@ -10,11 +10,11 @@ jobs:
     steps:
       # clone repository
       - name: Clone repository
-        uses: rayne_fall/computer-infrastructure@v2.3
+        uses: rayne-fall/computer-infrastructure@v2.3
         with: 
           depth: 1
           branch: 'main'
-          owner: 'rayne_fall'
+          owner: 'rayne-fall'
           repository: 'computer-infrastructure'
       # download data from Athenry weather station and save to weather subdirectory    
       - name: Download and save weather data
