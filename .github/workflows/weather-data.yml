@@ -10,7 +10,7 @@ jobs:
     steps:
       # clone repository
       - name: Clone repository
-        uses: rayne_fall/clone-github-repo-action@v2.3
+        uses: rayne_fall/computer-infrastructure
         with: 
           depth: 1
           branch: 'main'
