@@ -20,8 +20,8 @@ jobs:
       # commit changes and push them to repository
       - name: Commit and push changes
         run:
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "rayne-fall"
+          git config --global user.email "rayne-fall@users.noreply.github.com"
           git add .
           git commit -m "Today's weather"
           git push
