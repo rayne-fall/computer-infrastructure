@@ -10,7 +10,7 @@ jobs:
     steps:
       # clone repository
       - name: Clone repository
-        uses: rayne-fall/computer-infrastructure@v2.3
+        uses: rayne-fall/computer-infrastructure
         with: 
           depth: 1
           branch: 'main'
