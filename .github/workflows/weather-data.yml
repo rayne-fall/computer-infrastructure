@@ -25,6 +25,7 @@ jobs:
           git add .
           git commit -m "Today's weather"
           git push
+          rm -rf path/to/repo/.git/index.lock
       # make sure workflow has permission to make changes
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
