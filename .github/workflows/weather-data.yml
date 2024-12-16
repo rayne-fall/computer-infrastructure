@@ -13,18 +13,18 @@ jobs:
         uses: actions/checkout@v3
       # download data from Athenry weather station and save to weather subdirectory    
       - name: Download and save weather data
-        run: 
+        run: |
           echo "Downloading data from Athenry weather station"
           wget -O $(date +"data/weather/%Y%m%d_%H%M%S").json https://prodapi.metweb.ie/observations/athenry/today
           echo "Download complete"
       # commit changes and push them to repository
       - name: Commit and push changes
-        run:
+        run: |
           git config --global user.name "rayne-fall"
           git config --global user.email "rayne-fall@users.noreply.github.com"
           git add .
           git commit -m "Today's weather"
           git push
       # make sure workflow has permission to make changes
-        #env:
-         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
