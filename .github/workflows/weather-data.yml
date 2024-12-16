@@ -3,11 +3,12 @@ name: Check Weather
 on: 
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '0 11 * * *' # runs at 11am each day
 jobs:
   extract_weather_data:
     runs-on: ubuntu-latest
     steps:
+      # clone repository
       - name: Clone repository
         uses: rayne_fall/clone-github-repo-action@v2.3
         with: 
@@ -15,4 +16,20 @@ jobs:
           branch: 'main'
           owner: 'rayne_fall'
           repository: 'computer-infrastructure'
-
+      # download data from Athenry weather station and save to weather subdirectory    
+      - name: Download and save weather data
+        run: 
+          echo "Downloading data from Athenry weather station"
+          wget -O $(date +"data/weather/%Y%m%d_%H%M%S").json https://prodapi.metweb.ie/observations/athenry/today
+          echo "Download complete"
+      # commit changes and push them to repository
+      - name: Commit and push changes
+        run:
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Today's weather"
+          git push
+      # make sure workflow has permission to make changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
