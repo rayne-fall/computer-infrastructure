@@ -11,11 +11,6 @@ jobs:
       # clone repository
       - name: Clone repository
         uses: actions/checkout@v3
-        with: 
-          depth: 1
-          branch: 'main'
-          owner: 'rayne-fall'
-          repository: 'rayne-fall/computer-infrastructure'
       # download data from Athenry weather station and save to weather subdirectory    
       - name: Download and save weather data
         run: 
