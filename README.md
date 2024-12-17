@@ -11,3 +11,9 @@ This repository contains my work for the Autumn 2024 COMPUTER INFRASTRUCTURE mod
 1. https://www.geeksforgeeks.org/adding-value-labels-on-a-matplotlib-bar-chart/
 
 1. https://unix.stackexchange.com/questions/278939/how-do-you-put-date-and-time-in-a-file-name
+
+1. https://www.met.ie/climate/available-data/monthly-data
+
+1. https://www.metoffice.gov.uk/weather/learn-about/weather/how-weather-works/high-and-low-pressure
+
+1. https://data.gov.ie/dataset/todays-weather-athenry
