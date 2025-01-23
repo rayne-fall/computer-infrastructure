@@ -3,7 +3,7 @@ name: Check Weather
 on: 
   workflow_dispatch:
   schedule:
-    - cron: '0 11 * * *' # runs at 11am each day
+    - cron: '0 15 * * *' # runs at 11am each day
 jobs:
   extract_weather_data:
     runs-on: ubuntu-latest
